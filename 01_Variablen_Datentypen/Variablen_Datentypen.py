@@ -22,9 +22,10 @@ Kommentar
 '''
 
 # DEFINITION von VARIABLEN
-a = 5 
+a = 5 # Jede Variable benötigt einen STARTWERT
 # a ist eine Variable, Variablennamen sind frei wählbar
 # eine Variable ist ein Platzhalter für Informationen
+# Variablen sollten AUSSAGEKRÄFTIGE Namen haben
 x = 8 # = ist der Zuweisungsoperator
 
 # beim Zuweisen an Variable wird von 
@@ -57,6 +58,16 @@ d /= x # Kurzschreiweise von Zeile oben
 
 d = d * x
 d *= x # Kurzschreiweise von Zeile oben
+
+# Ein paar Infos zu DATENTYPEN 
+# Datentyp ist die "Art" der Information einer Variable
+ganze_zahl = 3 # Datentyp: Ganzzahl, engl. Integer
+hoehe = 5.5 # Datentyp: Kommazahl, Float, KOMMA ist der PUNKT!!!
+temperatur = -3.8 # Datentyp: Float, aber ebene negativ
+name = "Weber" # Vorschlag: Text, Fachbegriff: ZEICHENKETTE, engl. String
+stimmt_das = False # Datentyp: Wahrheitswert, engl. Bool, 
+das_ist_richtig = True
+
 
 
 
