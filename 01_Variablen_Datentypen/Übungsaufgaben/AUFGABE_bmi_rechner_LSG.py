@@ -36,5 +36,20 @@ print(bmi)
 # Zusatzaufgabe:
 gewicht_kg = input("Bitte geben Sie Ihr Gewicht in Kilogramm ein: ")
 groesse_m = input("Bitte geben Sie Ihre Größe in Metern ein: ")
-bmi = float(gewicht_kg) / float(groesse_m)**2 # Datentypkonvertierung nach float (Kommazahl)
+
+# Das PROBLEM: Alles was von input() zurückgeliefert wird, 
+# ist eine Zeichenkette
+# LÖSUNG des PROBLEMS: Datentypumwandlung von String > Float (Kommazahl)
+gewicht_kg = float(gewicht_kg)
+groesse_m = float(groesse_m)
+
+# Kurzvariante: 
+#bmi = float(gewicht_kg) / float(groesse_m)**2 # Datentypkonvertierung nach float (Kommazahl)
+
+bmi = gewicht_kg / groesse_m**2
 print("Ihr BMI ist: " + str(bmi)) # Datentypkonvertierung nach string (Zeichenkette)
+
+
+
+
+
