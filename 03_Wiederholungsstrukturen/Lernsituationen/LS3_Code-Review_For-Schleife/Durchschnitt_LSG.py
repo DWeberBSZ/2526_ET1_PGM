@@ -17,6 +17,13 @@ anzahl = 0
 for i in range(1, 31):
     summe += i
     anzahl += 1
+    
+#for i in range(anzahl):
+#    summe += (i+1)
+    
+# Alternative:
+#for i in range(1, 31):
+#    summe += i
 
 # 2. Schritt: Durchschnitt berechnen
 durchschnitt = summe / anzahl
