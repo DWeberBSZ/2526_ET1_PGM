@@ -6,31 +6,22 @@ artikel_preis_eur = dict() # Bei Listen war das list()
 einkaufswagen = [ ]
 einkaufswagen = list()
 
-# Bei Dictionaries könnt ihr Einträge sehr einfach hinzufügen:
-artikel_preis_eur["Apfel"] = 0.50 # Preis 
-artikel_preis_eur["Banane"] = 0.30
-artikel_preis_eur["Orange"] = 0.80
-print(artikel_preis_eur)
 
-# Bei Listen geht das NICHT:
-#einkaufswagen[0] = "Apfel" # Geht nicht, da der Index 0 noch nicht existiert
-#einkaufswagen.append("Apfel") # So geht es
+artikel_preis_eur["Apfel"] = 0.30 # Werte zu einem Dict hinzufügen
+artikel_preis_eur["Birne"] = 0.45
+artikel_preis_eur["Schokoloade"] = 2.50
 
-for key in artikel_preis_eur: # Standardmäßig wird über die Schlüssel iteriert
-    print(f"Der Preis von {key} ist {artikel_preis_eur[key]} EUR.")
+#print(artikel_preis_eur["Ramensuppe"]) # das geht NICHT!
 
-# Wenn ich stattdessen über die Werte iterieren möchte:
-for preis in artikel_preis_eur.values():
-    print(f"Ein Artikel kostet {preis} EUR.")
+#einkaufswagen[0] = "Schokolade" # das funktioniert NICHT bei Listen
 
-# Wenn ich sowohl Schlüssel als auch Werte haben möchte:
+for artikel in artikel_preis_eur:
+    print(artikel)
+    
 for artikel, preis in artikel_preis_eur.items():
-    print(f"Der Preis von {artikel} ist {preis} EUR.")
-
-# Was sonst noch wichtig ist:
-# - Dictionaries sind ungeordnet (bis Python 3.6). Ab Python 3.7 behalten sie die Einfügereihenfolge bei.
-# - Schlüssel in Dictionaries müssen unveränderlich (hashable) sein, z.B. Strings, Zahlen oder Tupel.
-# - Werte können beliebige Datentypen sein, einschließlich Listen oder sogar andere Dictionaries.
-# - Dictionaries sind sehr effizient für das Nachschlagen von Werten basierend auf Schlüsseln.
-
-
+    print(artikel, preis)
+    
+for preis in artikel_preis_eur.values():
+    print(preis)
+    
+print(artikel_preis_eur)
