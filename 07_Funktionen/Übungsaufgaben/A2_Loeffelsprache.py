@@ -42,15 +42,15 @@ Zeit: 15 Minuten
 
 """
 
-vokale = ["e", "a", "i", "o", "u", "ü", "ö", "ä"]
+
+
+vokale_liste = ["e", "a", "i", "o", "u", "ü", "ö", "ä"]
 
 def loeffel(eingabe):
-    # TODO.
     pass
 
-
 print(loeffel("Hallo"))
-print(loeffel("Verstehst du Deutsch?"))               
+#print(loeffel("Verstehst du Deutsch?"))               
       
             
 
