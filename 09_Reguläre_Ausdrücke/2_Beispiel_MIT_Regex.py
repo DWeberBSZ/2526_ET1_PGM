@@ -11,10 +11,17 @@ win_codes = list()
 
 def is_win_code(text):
     # 2. Schritt: Wir legen ein Regex-Objekt an und teilen dem Programm unser Muster mit:
-
+    #win_code_muster_re = re.compile("\d\d\d-\d\d\d-\d\d\d\d")
+    win_code_muster_re = re.compile("\d{3}-\d{3}-\d{4}")
 
     # 3. Schritt: Wir überprüfen unseren Text nach diesem Muster.
- 
+    re_ergebnis = win_code_muster_re.search(text)
+    
+    if re_ergebnis != None: # Überprüfen, "ob ein Ergebnis herauskommt"
+        print(re_ergebnis.group())
+        return True
+    else:    
+        return False
 
 with open("win_codes.txt", "r") as file:
 
@@ -22,9 +29,9 @@ with open("win_codes.txt", "r") as file:
         if is_win_code(line.strip()):
             win_codes.append(line.strip())
 
-print(win_codes)
+#print(win_codes)
 
-# OPTIONAL: Zusätzlich in separater Datei abspeichern:
+# Zusätzlich in separater Datei abspeichern:
 with open("win_codes_cleaned.txt", "w") as file:
     for win_code in win_codes:
         file.write(win_code + "\n")

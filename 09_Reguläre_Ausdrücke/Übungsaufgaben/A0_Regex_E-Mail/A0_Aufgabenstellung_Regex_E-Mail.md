@@ -13,8 +13,11 @@ Die gesuchten E-Mail-Adressen haben immer das folgende Format:
 - Es folgt der Klammeraffe "@"
 - Die E-Mail-Adressen sollen alle mit der Domain bsz-neumarkt.de enden
 
-HINWEIS: Nutzen Sie als Hilfestellung Tabelle 9-1 im Kapitel "Character Classes" der folgenden Website:
+HINWEIS: 
+- Nutzen Sie als Hilfestellung Tabelle 9-1 im Kapitel "Character Classes" der folgenden Website:
 https://automatetheboringstuff.com/3e/chapter9.html
+
+- Alternativ können Sie auch das CheatSheet verwenden
 
 Speichern Sie die relevanten E-Mail-Adressen in einer separaten Datei ab.
 
