@@ -1,6 +1,7 @@
 # Übungsaufgabe: E-Mail-Adresse erkennen
 
-Ziel dieser Aufgabe ist das Herausfiltern von bestimmten E-Mail-Adressen aus einem korrupten Textdokument.
+Ziel dieser Aufgabe ist das Herausfiltern von bestimmten 
+E-Mail-Adressen aus einem korrupten Textdokument.
 
 Gegeben ist das Textdokument mail_addresses.txt mit E-Mail-Adressen. 
 Leider haben sich ein paar fehlerhafte Zeilen eingeschlichen. 
