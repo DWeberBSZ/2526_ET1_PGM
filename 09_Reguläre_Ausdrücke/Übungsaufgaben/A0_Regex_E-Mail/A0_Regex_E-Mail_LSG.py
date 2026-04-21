@@ -24,4 +24,41 @@ Geben Sie den Inhalt vor dem Klammeraffen @ während des Programmablaufs zusätz
 
 Zeit: 20 Minuten, Einzelarbeit
 """
+import re
+
+eingabe_zeilen = list()
+gefilterte_zeilen = list()
+
+# Funktion zum Prüfen einer Zeile 
+def ist_email_ok(zeile):
+    
+    # Wir brauchen erstmal die Compile-Funktion, also unser Muster:
+    email_muster = re.compile(r"\D\w\w@bsz-neumarkt.de")
+    gefundes_muster = email_muster.search(zeile)
+    
+    if gefundes_muster != None: # Muster wurde gefunden in dieser Zeile
+        return True
+    else:
+        return False
+
+# Öffnen und lesen eines Dokuments
+with open("mail_addresses.txt", "r") as doc:
+    zeilen = doc.readlines()
+    
+    for zeile in zeilen:
+        eingabe_zeilen.append(zeile)
+        
+        if ist_email_ok(zeile.strip()): # strip() löscht unnötige Zeichen am Ende einer Zeile
+            gefilterte_zeilen.append(zeile)
+        else:
+            # Das wäre eine nicht korrekte Zeile: überspringen
+            pass
+            
+# Ausgabedatei öffnen und beschreiben
+with open("korrekte_emails.txt", "w") as doc: # Name für doc ist frei wählbar
+    for zeile in gefilterte_zeilen:
+        doc.write(zeile + "\n")
+        
+        
+        
 
