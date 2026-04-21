@@ -33,10 +33,11 @@ gefilterte_zeilen = list()
 def ist_email_ok(zeile):
     
     # Wir brauchen erstmal die Compile-Funktion, also unser Muster:
-    email_muster = re.compile(r"\D\w\w@bsz-neumarkt.de")
+    email_muster = re.compile(r"(\D\w\w)@bsz-neumarkt.de")
     gefundes_muster = email_muster.search(zeile)
     
     if gefundes_muster != None: # Muster wurde gefunden in dieser Zeile
+        print(gefundes_muster.group(1)) # 1 liefert die 1. Gruppe
         return True
     else:
         return False
